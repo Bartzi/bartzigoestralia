@@ -1,0 +1,33 @@
+body {
+    height: 100%;
+    margin: 0; 
+    padding: 0;
+}
+
+.contents {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+#map_canvas {
+    height: 100%;
+}
+
+.left-part {
+    width: 150px;
+    text-align: left;
+}
+
+.right-part {
+    width: 100%;
+    text-align: left;
+}
+
+.label {
+    color: white;
+    text-align: center;
+}

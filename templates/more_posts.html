@@ -1,0 +1,52 @@
+{% for post in posts %}
+    <div class="transbox flex-item post-stuff" data-id="{{ post.key() }}">
+        <div class="content">
+            <h1>{{ post.title }}</h1>
+            <div class="post-content">{{ post.content }}</div>
+            <div> Geschrieben: {{ post.date|datetime }}</div>
+            <hr class="splitter"></hr>
+            <div class="image-div">
+                <h2>Bilder</h2>
+                <div class="galleria">
+                {% for image in post.image_set %}
+                    <img src="/img?img_id={{ image.data.key() }}" data-title="{{ image.name }}">
+                {% else %}
+                    <div>Keine Bilder =(</div>
+                {% endfor %}
+                </div>
+                <hr class="splitter"></hr>
+            </div>
+            <div class="comments">
+                <h3 class="comment-heading">Kommentare</h3>
+                 <div class="comment-wrapper">
+                    <button class="btn btn-primary comment-button"><i class="icon-pencil icon-white"></i>  Kommentar hinzufügen</button>
+                    <form class="comment-form">
+                        <label>Dein Name:</label>
+                        <input name="name" class="input-xxlarge comment-input" type="text" placeholder="Max Mustermann">
+                        <label>Dein Kommentar:</label>
+                        <textarea name="comment" class="input-xxlarge comment-input" rows="5" placeholder="Diese Seite ist voll toll ;-)"></textarea>
+                        <input type="hidden" name="id" value="{{ post.key() }}">
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary form-button submit-comment"><i class="icon-ok icon-white"></i> Kommentieren</button>
+                            <button type="button" class="btn abort-comment"><i class="icon-remove"></i>Abbrechen</button>
+                        </div>
+                    </form>
+                    <hr class="splitter"></hr>
+                    <div class="comment-view">
+                        {% for comment in post.comment_set|sort(attribute='date') %}
+                            <div class='comment-view-item flexbox'>
+                                <div class='comment-view-date flex-item'>{{ comment.date|datetime_comment }}</div>
+                                <div class='comment-view-name flex-item'>{{ comment.name }}:</div>
+                                <div class='comment-view-comment flex-item'>{{ comment.content }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="comment-chevron flex-item"><i class="icon-chevron-down icon-white"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+<div class="replace-me"></div>

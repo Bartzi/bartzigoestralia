@@ -1,0 +1,13 @@
+.announcement{
+    color: black;
+    font-size: 80px;
+    text-shadow: 2px 1px 0 #FFF;
+}
+
+html { 
+  background: url(/images/outback.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

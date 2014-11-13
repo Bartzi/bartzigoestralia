@@ -1,0 +1,33 @@
+{% extends "templates/with_menu.html" %}
+
+{% block title %}
+    Archive
+{% endblock title %}
+
+{% block additional_css %}
+    <link href="/css/content.css" rel="stylesheet">
+{% endblock additional_css %}
+
+{% block contents %}
+    <div class="wrapper-main">
+            <div class="flexbox flexbox-vert">
+                <div class="transbox flex-item">
+                    <div class="content">
+                        <h1>Archiv</h1>
+                        <h2>Klicke einen Beitrag um ihn zu lesen!</h2>
+                    </div>
+                </div>
+                {% for post in posts %}
+                    <div class="transbox flex-item">
+                        <div class="content">
+                            <a class="no-change-link" href="/viewpost?post_id='{{ post.key() }}'">
+                                <h2>{{ post.title }}</h2></a>
+                            <h3>geschrieben am: {{ post.date|datetime }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    
+
+{% endblock contents %}

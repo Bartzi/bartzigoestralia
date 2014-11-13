@@ -1,0 +1,91 @@
+application: bartzigoestralia
+version: 1-0
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/js
+
+- url: /images
+  static_dir: static/img/
+
+- url: /img
+  script: main.app
+
+- url: /themes
+  static_dir: static/themes/
+
+- url: /favicon\.ico
+  static_files: kangaroo.ico
+  upload: kangaroo\.ico
+
+- url: /write
+  script: main.app
+  login: admin
+  auth_fail_action: redirect
+  secure: always
+
+- url: /edit
+  script: main.app
+  login: admin
+  auth_fail_action: redirect
+  secure: always
+
+- url: /changepost
+  script: main.app
+  login: admin
+  auth_fail_action: unauthorized
+  secure: always
+
+- url: /addPost
+  script: main.app
+  login: admin
+  auth_fail_action: unauthorized
+  secure: always
+
+- url: /upload
+  script: main.app
+  login: admin
+  auth_fail_action: unauthorized
+  secure: always
+
+- url: /addImage
+  script: main.app
+  login: admin
+  auth_fail_action: unauthorized
+  secure: always
+
+- url: /map/update
+  script: map.app
+  login: admin
+  secure: always
+
+- url: /map/data
+  script: map.app
+  secure: always
+
+- url: /map
+  script: map.app
+  secure: always
+
+- url: .*
+  script: main.app
+  secure: always
+
+#error_handlers:
+#- file: default_error.html
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
+
+inbound_services:
+- warmup
+

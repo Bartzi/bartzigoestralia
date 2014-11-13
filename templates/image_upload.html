@@ -1,0 +1,46 @@
+{% extends "templates/with_menu.html" %}
+
+{% block title %}
+    Bartzi's Blog
+{% endblock title %}
+
+{% block additional_css %}
+    <link href="/css/content.css" rel="stylesheet">
+    <script type="text/javascript" src="js/content.js"></script>
+{% endblock additional_css %}
+
+{% block contents %}
+	<div class="wrapper-main">
+        <div class="flexbox flexbox-vert">
+            <div class="transbox flex-item">
+                <div class="content">
+                    <!-- here the user shall see new blogposts and stuff -->
+                    <h1>bartzigoestralia.de</h1>
+                    <h2>Upload a Picture</h2>
+                    <h3 class="message"><h3> 
+                </div>
+            </div>
+            <div class="transbox flex-item">
+                <div class="content">
+                    <form class="post-form" action="{{ upload_url }}" enctype="multipart/form-data" method="post">
+                        <label>Name:</label>
+                        <input name="name" class="input-xxlarge comment-input" type="text" placeholder="ein Name">
+                        <label>Bild:</label>
+                        <input type="file" name="picture" multiple/>
+                        <label>Post:</label>
+                        <select name="post_id">
+                        	{% for post in posts %}
+								<option name="post" value="{{ post.key() }}">{{ post.title }}</option>
+							{% endfor %}
+						</select>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary form-button submit-comment"><i class="icon-upload icon-white"></i> Hochladen</button>
+                            <button type="button" class="btn abort-comment form-button"><i class="icon-remove"></i>Abbrechen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock contents %}

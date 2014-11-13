@@ -1,0 +1,54 @@
+{% extends "templates/base.html" %}
+
+{% block head %}
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/menu.css" rel="stylesheet">
+    <link href="/css/{{ css }}" rel="stylesheet">
+    {% block additional_css %}
+    {% endblock additional_css %}
+{% endblock head %}
+
+{% block body %}
+    <div class="menu">
+        <div class="menu-arrow">
+        </div>
+        <!-- here comes the menu -->
+        <div class="flexbox flexbox-vert">
+            <div class="flex-item menu-item menu-item-trans">
+                <a class="menu-link" href="/overview">Home</a>
+            </div>
+            <div class="flex-item menu-item menu-item-trans">
+                <a class="menu-link" href="/map">Map</a>
+            </div>
+            <div class="flex-item menu-item menu-item-trans">
+                <a class="menu-link" href="/archive">Archive</a>
+            </div>
+            {% if logout %}
+                <div class="flex-item menu-item menu-item-trans">
+                    <a class="menu-link" href="/write">Neuer Post</a>
+                </div>
+                <div class="flex-item menu-item menu-item-trans">
+                    <a class="menu-link" href="/edit">Post editieren</a>
+                </div>
+                <div class="flex-item menu-item menu-item-trans">
+                    <a class="menu-link" href="/addImage">Ein Bild hochladen</a>
+                </div>
+                <div class="flex-item menu-item menu-item-trans">
+                    <a class="menu-link" href="{{ logout }}">Logout</a>
+                </div>
+            {% else %}
+                <div class="flex-item menu-item menu-item-trans">
+                    <a class="menu-link" href="/write">Admin Login</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="contents">
+        {% block contents %}
+            <!-- here comes your content! -->
+        {% endblock %}
+    </div>
+{% endblock body %}

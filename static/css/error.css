@@ -1,0 +1,150 @@
+body{
+    background-color: #1173AA;
+}
+
+#smiley{
+    font-size: 100px;
+}
+
+#description{
+    margin-top: -10%;
+    font-size: 40px;
+}
+
+#help{
+    margin-top: -3%;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    #smiley{
+        font-size: 80px;
+    }
+
+    #description{
+        margin-top: -10%;
+        font-size: 23px;
+    }
+
+    #help{
+        margin-top: -3%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #smiley{
+        font-size: 60px;
+    }
+
+    #description{
+        margin-top: -10%;
+        font-size: 17px;
+    }
+
+    #help{
+        margin-top: -3%;
+        font-size: 15px;
+    }
+}
+
+.font{
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: white;
+}
+
+.error-link{
+    color: white;
+}
+
+.error-link:visited{
+    color: white;
+}
+
+.error-link:hover{
+    color: blue;
+}
+
+.flexbox{
+    display: -moz-box;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    -ms-flex-pack: center;
+    -ms-flex-line-pack: center;
+    -ms-flex-align: center;
+
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;    
+    align-items: center;
+}
+
+.flex-element{
+
+    -moz-box-ordinal-group: 1;
+    -moz-box-flex: 0;
+
+    -webkit-order: 0;
+    -webkit-flex: 0 1 auto;
+    -webkit-align-self: center;
+
+    -ms-flex-order: 0;
+    -ms-flex: 0 1 auto;
+    -ms-flex-item-align: center;
+
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+}
+
+@-moz-document url-prefix() {
+    .flexbox {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        }
+
+    #description{
+        margin-top: -200px;
+    }
+
+    #help{
+        margin-top: -50px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        #description{
+            margin-top: -150px;
+        }
+
+        #help{
+            margin-top: -25px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        #description{
+            margin-top: -100px;
+        }
+
+        #help{
+            margin-top: -15px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{% extends "templates/with_menu.html" %}
+
+{% block title %}
+    Bartzi's Blog
+{% endblock title %}
+
+{% block additional_css %}
+    <link href="/css/content.css" rel="stylesheet">
+    <link href="/css/slides.css" rel="stylesheet">
+    <script type="text/javascript" src="js/content.js"></script>
+    <script type="text/javascript" src="js/galleria-1.2.9.min.js"></script>
+{% endblock additional_css %}
+
+{% block contents %}
+    {% set slidesCounter = 0 -%}
+    <div class="wrapper-main">
+        <div class="flexbox flexbox-vert">
+            <div class="transbox flex-item">
+                <div class="content">
+                    <!-- here the user shall see new blogposts and stuff -->
+                    <h1>Willkommen auf bartzigoestralia.de</h1>
+                    <h2>Ein Blog über ein halbes Jahr in Down Under</h2>
+                </div>
+            </div>
+            {% for post in posts %}
+                {% include 'templates/post_view.html' %}
+            {% endfor %}
+            <div class="replace-me"></div>
+            <div class="transbox flex-item retrieve-button">
+                <div class="content">
+                    <button id="retrieve" class="btn btn-primary"> <i class="icon-road icon-white"></i> Ich will noch mehr sehen!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock contents %}

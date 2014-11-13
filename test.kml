@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Test</name>
+      <description>17.10.2013 14:14 Test</description>
+      <Point>
+        <coordinates>13.44345592,52.54668576,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T02:14:50Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Test3</name>
+      <description>17.10.2013 14:15
+      </description>
+      <Point>
+        <coordinates>13.44326657,52.5464155,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T02:15:27Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Haltestelle tram</name>
+      <description>17.10.2013 16:55
+Feierabend
+</description>
+      <Point>
+        <coordinates>13.44475162,52.54565228,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T04:55:46Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>S-Bahn gws</name>
+      <description>17.10.2013 17:01   hhhhhh
+Gszdbdjj
+</description>
+      <Point>
+        <coordinates>13.43881639,52.53972833,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T05:01:14Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>S-Bahn Storkower Bla Blab</name>
+      <description>17.10.2013 17:06
+Tttttt
+Shshshshs
+Yhshshs
+Uuuuuuuu
+</description>
+      <Point>
+        <coordinates>13.464731,52.52380621,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T05:06:34Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Rein Zur Ubahn ffa</name>
+      <description>17.10.2013 17:10 
+Schön schnell
+</description>
+      <Point>
+        <coordinates>13.4750245,52.51372041,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T05:10:12Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Licht !!!!!! Juhuuuu</name>
+      <description>17.10.2013 17:23
+Wieder an der Oberfläche!!!
+</description>
+      <Point>
+        <coordinates>13.53166155,52.4957913,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T05:23:44Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Wuhletal</name>
+      <description>17.10.2013 17:29
+Wird langsam....
+Wieviel geht?
+Noch immer?
+</description>
+      <Point>
+        <coordinates>13.5754366,52.51254967,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T05:29:27Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Zuhause........
+Und Testende!!**</name>
+      <description>17.10.2013 17:34
+Endlich da
+Endlich da
+Endlich da
+Endlich da
+Ende!!!!
+</description>
+      <Point>
+        <coordinates>13.5903941,52.52899074,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-17T05:34:04Z</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Test</name>
+      <description>October 22, 2013 20:17 
+</description>
+      <Point>
+        <coordinates>13.590393997728825,52.52899176373468,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-22T06:17:05+0000</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Neuer Test</name>
+      <description>October 24, 2013 2:35 PM
+Ggggg
+Hhhh
+</description>
+      <Point>
+        <coordinates>13.590393997728825,52.52899176373468,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-24T12:35:23+0000</when>
+      </TimeStamp>
+    </Placemark>
+    <Placemark>
+      <name>Neuer Test Ggggggh</name>
+      <description>October 25, 2013 2:38 PM
+Shsjsjssh
+Sjsssjyh
+</description>
+      <Point>
+        <coordinates>13.4485027,52.535287,0</coordinates>
+      </Point>
+      <TimeStamp>
+        <when>2013-10-25T12:38:32+0000</when>
+      </TimeStamp>
+    </Placemark>
+    <Folder>
+      <name>Lines</name>
+      <open>0</open>
+      <Placemark>
+        <LineString>
+          <coordinates>13.44345592,52.54668576,0 13.44326657,52.5464155,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.44326657,52.5464155,0 13.44475162,52.54565228,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.44475162,52.54565228,0 13.43881639,52.53972833,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.43881639,52.53972833,0 13.464731,52.52380621,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.464731,52.52380621,0 13.4750245,52.51372041,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.4750245,52.51372041,0 13.53166155,52.4957913,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.53166155,52.4957913,0 13.5754366,52.51254967,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.5754366,52.51254967,0 13.5903941,52.52899074,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.5903941,52.52899074,0 13.590393997728825,52.52899176373468,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.590393997728825,52.52899176373468,0 13.590393997728825,52.52899176373468,0</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <LineString>
+          <coordinates>13.590393997728825,52.52899176373468,0 13.4485027,52.535287,0</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

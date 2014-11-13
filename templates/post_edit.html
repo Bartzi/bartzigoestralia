@@ -1,0 +1,31 @@
+<h2>Edit Title</h2>
+<input id="title" class="input-xxlarge edit-input" type="text" data-id="{{ post.key() }}" value="{{ post.title }}">
+<h2>Edit Content</h2>
+<textarea id="content" class="input-xxlarge edit-input" data-id="{{ post.key() }}" rows="10">{{ post.content }}</textarea>
+<h2>Edit Images</h2>
+{% for image in post.image_set %}
+	<img class="edit_image" src="/img?img_id={{ image.data.key() }}">
+	<input class="edit-input" data-img="{{ image.key() }}" value="{{ image.name }}">
+{% endfor %}
+<script>
+	var edit_inputs = jQuery('.edit-input');
+	jQuery.each(edit_inputs, function (index, input) {
+		jQuery(input).on('focusout', function (event) {
+			data = null;
+			var that = jQuery(this);
+			if (this.dataset['img']) {
+				data = {image_id: this.dataset['img'], name: that.val()};
+			} else if (that.attr('type')) {
+				data = {post_id: this.dataset['id'], title: that.val()};
+			} else {
+				data = {post_id: this.dataset['id'], content: that.val()};
+			}
+			jQuery.post('/changepost',
+				data,
+				function (data, textStatus, jqXHR) {
+					console.log(data);
+					console.log(textStatus)
+				});
+		});
+	});
+</script>

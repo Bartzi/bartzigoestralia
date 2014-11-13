@@ -1,0 +1,21 @@
+{% extends "templates/base.html" %}
+
+{% block title %}Welcome!{% endblock title %}
+
+{% block head %}
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/{{ css }}" rel="stylesheet">
+{% endblock head %}
+
+{% block body %}
+    <div class="text-wrapper">
+        <div class="flexbox">
+            <h1 class="announcement flex-item responsive-text">Welcome =)</h1>
+        </div>
+    </div>
+    <div class="button-wrapper">
+        <div class="flexbox">
+            <a href="/overview" class="centerbutton huge-button">Enter</a>
+        </div>
+    </div>
+{% endblock body %}

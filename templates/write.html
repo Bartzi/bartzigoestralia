@@ -1,0 +1,50 @@
+{% extends "templates/with_menu.html" %}
+
+{% block title %}
+    Bartzi's Blog - Adminbereich
+{% endblock title %}
+
+{% block additional_css %}
+    <link href="/css/content.css" rel="stylesheet">
+    <script type="text/javascript" src="js/write.js"></script>
+{% endblock additional_css %}
+
+{% block contents %}
+    <div class="wrapper-main">
+        <div class="flexbox flexbox-vert">
+            <div class="transbox flex-item">
+                <div class="content">
+                    <!-- here the user shall see new blogposts and stuff -->
+                    <h1>bartzigoestralia.de</h1>
+                    <h2>Admin Bereich</h2>
+                    <h3 class="message"><h3> 
+                </div>
+            </div>
+            <div class="transbox flex-item">
+                <div class="content">
+                    <form class="post-form">
+                        <label>Autor:</label>
+                        <input name="name" class="input-xxlarge comment-input" type="text" value="{{ username }}">
+                        <label>Titel:</label>
+                        <input name="title" class="input-xxlarge comment-input" type="text" placeholder="Es sind tolle Sachen geschehen">
+                        <label>Dein Post:</label>
+                        <textarea name="content" id="post-content" class="input-xxlarge comment-input" rows="10" placeholder="Ein geiler Tag im Paradies ist zu ende..."></textarea>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary form-button submit-comment"><i class="icon-ok icon-white"></i> Posten</button>
+                            <button type="button" class="btn abort-comment form-button"><i class="icon-remove"></i>Abbrechen</button>
+                            <button type="button" class="btn btn-info"><i class ="icon-eye-open"></i>Preview</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="transbox flex-item">
+                <div class="content">
+                    <h2>Preview</h2>
+                    <hr class="splitter"></hr>
+                </div>
+                <div class="content preview-div post-content">   
+                </div> 
+            </div>
+        </div>
+    </div>
+{% endblock contents %}

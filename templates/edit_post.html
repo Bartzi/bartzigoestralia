@@ -1,0 +1,35 @@
+{% extends "templates/with_menu.html" %}
+
+{% block title %}
+    Bartzi's Blog
+{% endblock title %}
+
+{% block additional_css %}
+    <link href="/css/content.css" rel="stylesheet">
+    <link href="/css/edit_post.css" rel="stylesheet">
+    <script type="text/javascript" src="js/edit_post.js"></script>
+{% endblock additional_css %}
+
+{% block contents %}
+    <div class="wrapper-main">
+        <div class="flexbox flexbox-vert">
+            <div class="transbox flex-item">
+                <div class="content">
+                    <form class="edit_form">
+                    	<label>Welcher Post soll editiert werden?</label>
+                    	<select class="post_select" name="posts">
+                    		{% for post in posts %}
+                    			<option name="post" value="{{ post.key() }}">{{ post.title }}</option>
+                    		{% endfor %}
+                    	</select>
+                    </form>
+                </div>
+            </div>
+           	<div class="transbox flex-item">
+                <div class="content post-stuff">
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+{% endblock contents %}

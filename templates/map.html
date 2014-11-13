@@ -1,0 +1,16 @@
+{% extends "templates/with_menu.html" %}
+
+{% block title %}
+    Bartzi's Blog
+{% endblock title %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="/css/map.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASfmOsoQ1POHKxiyqrWSLnyex9GvHhtBw&sensor=false"></script>
+    <script type="text/javascript" src="js/markerwithlabel_packed.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+{% endblock additional_css %}
+
+{% block contents %}
+    <div id="map_canvas" style="width: 100%; height 100%"></div>
+{% endblock contents %}
